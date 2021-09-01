@@ -5,21 +5,25 @@ namespace Library
 {
     public class AppointmentService
     {
+
         string name;
         string id;
         string phoneNumber;
         DateTime date;
         string appointmentPlace;
         string doctorName;
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appointmentPlace, string doctorName) //El nombre deberia ser appointmentPlace
+        
+        //No se desarolla el programa con una orientacion a objetos. En su lugar se utiliza un String Builder.
+        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
 
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(name)) // Cada uno de estos debe de ser un set que verifique si el atributo del objeto esta vacio.
             {
                 stringBuilder.Append("Unable to schedule appointment, Name is required\n");
-                isValid = false;
+                isValid = false; //Deberia de retornar el valor false y detener la ejecucion del codigo para no consumir recursos.
             }
 
             if (string.IsNullOrEmpty(id))
