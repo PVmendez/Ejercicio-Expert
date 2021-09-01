@@ -5,8 +5,17 @@ namespace Library
 {
     public class AppointmentService
     {
+
+        string name;
+        string id;
+        string phoneNumber;
+        DateTime date;
+        string appointmentPlace;
+        string doctorName;
+        
         //No se desarolla el programa con una orientacion a objetos. En su lugar se utiliza un String Builder.
         public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
@@ -31,7 +40,7 @@ namespace Library
 
             if (string.IsNullOrEmpty(appoinmentPlace))
             {
-                stringBuilder.Append("Unable to schedule appointment, Appoinment place is required\n");
+                stringBuilder.Append("Unable to schedule appointment, Appointment place is required\n");
                 isValid = false;
             }
 
@@ -44,7 +53,7 @@ namespace Library
 
             if (isValid)
             {
-                stringBuilder.Append("Appoinment Scheduled");
+                stringBuilder.Append("Appointment Scheduled");
             }
 
             return stringBuilder.ToString();
