@@ -50,5 +50,96 @@ namespace Library
             return stringBuilder.ToString();
         }
 
+         public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                if (!String.IsNullOrEmpty(value)){
+                    name = value;
+                }else{
+                    return false;
+                }
+            }
+        }
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                if (!String.IsNullOrEmpty(value)){
+                    id = value;
+                }else{
+                    return false;
+                }
+            }
+        }
+        public string PhoneNumber
+        {
+            get
+            {
+                return PhoneNumber;
+            }
+            set
+            {
+                if (!String.IsNullOrEmpty(value)){
+                    PhoneNumber = value;
+                }else{
+                    return false;
+                }
+            }
+        }
+        public DateTime Date
+        {
+            get
+            {
+                return date;
+            }
+            set
+            {
+                if (!String.IsNullOrEmpty(value)){
+                    date = value;
+                }else{
+                    return false;
+                }
+            }
+        }
+        public string AppointmentPlace
+        {
+            get
+            {
+                return appoinmentPlace;
+            }
+            set
+            {
+                if (!String.IsNullOrEmpty(value)){
+                    appoinmentPlace = value;
+                }else{
+                    return false;
+                }
+            }
+        }
+        public string DoctorName
+        {
+            get
+            {
+                return doctorName;
+            }
+            set
+            {
+                if (!String.IsNullOrEmpty(value)){
+                    doctorName = value;
+                }else{
+                    return false;
+                }
+            }
+        }
+
     }
 }
