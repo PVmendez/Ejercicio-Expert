@@ -15,7 +15,7 @@ namespace Library
         
         //No se desarolla el programa con una orientacion a objetos. En su lugar se utiliza un String Builder.
         //public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
-        public Appointment(string name, string id, string phoneNumber, DateTime date, string appointmentPlace, string doctorName)
+        public AppointmentService(string name, string id, string phoneNumber, DateTime date, string appointmentPlace, string doctorName)
 
         {
             this.Name = name;
@@ -70,7 +70,6 @@ namespace Library
             }
 
             return stringBuilder.ToString();*/
-            return true;
         }
 
          public string Name
@@ -84,7 +83,7 @@ namespace Library
                 if (!String.IsNullOrEmpty(value)){
                     name = value;
                 }else{
-                    return false;
+                     Console.WriteLine("Esta vacio");
                 }
             }
         }
@@ -99,7 +98,7 @@ namespace Library
                 if (!String.IsNullOrEmpty(value)){
                     id = value;
                 }else{
-                    return false;
+                    Console.WriteLine("Esta vacio");
                 }
             }
         }
@@ -114,7 +113,7 @@ namespace Library
                 if (!String.IsNullOrEmpty(value)){
                     PhoneNumber = value;
                 }else{
-                    return false;
+                    Console.WriteLine("Esta vacio");
                 }
             }
         }
@@ -126,10 +125,10 @@ namespace Library
             }
             set
             {
-                if (!String.IsNullOrEmpty(value)){
+                if (!DateTime.IsNullOrEmpty(value)){
                     date = value;
                 }else{
-                    return false;
+                    Console.WriteLine("Esta vacio");
                 }
             }
         }
@@ -144,7 +143,7 @@ namespace Library
                 if (!String.IsNullOrEmpty(value)){
                     appoinmentPlace = value;
                 }else{
-                    return false;
+                   Console.WriteLine("Esta vacio");
                 }
             }
         }
@@ -159,7 +158,7 @@ namespace Library
                 if (!String.IsNullOrEmpty(value)){
                     doctorName = value;
                 }else{
-                    return false;
+                    Console.WriteLine("Esta vacio");
                 }
             }
         }
